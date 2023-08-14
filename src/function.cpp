@@ -15,7 +15,7 @@ enum class Time {
     HOUR,
     MINUTE
 };
-const int ASSCI_0 = 48;
+const int ASCII_0 = 48;
 const int max_hour = 23;
 const int max_minute = 59;
 std::vector<char> events = {'c', 'u', 'd', 'p', 'e'};
@@ -62,7 +62,7 @@ bool check_element_completed(const std::string& str_element) {
 }
 
 bool is_number(char c) {
-    if (c - ASSCI_0 <= 9 && c + ASSCI_0 >= 0) {
+    if (c - ASCII_0 <= 9 && c + ASCII_0 >= 0) {
         return true;
     }
     return false;
@@ -71,7 +71,7 @@ bool is_number(char c) {
 bool check_hour(std::string hour) {
     int result = 0;
     for (int i = 0;i < hour.length();++i) {
-        result += hour[i] - ASSCI_0;
+        result += hour[i] - ASCII_0;
         result *= 10;
     }
     if (result/10 <= max_hour) {
@@ -83,7 +83,7 @@ bool check_hour(std::string hour) {
 bool check_minute(std::string minute) {
     int result = 0;
     for (int i = 0;i < minute.length();++i) {
-        result += minute[i] - ASSCI_0;
+        result += minute[i] - ASCII_0;
         result *= 10;
     }
     if (result/10 <= max_minute) {
@@ -172,7 +172,7 @@ bool check_event_completed(std::string ev) {
 }
 
 bool check_id(std::string ev, int limit) {
-    if (ev.length() == 1 && is_number(ev[0]) && (ev[0] - ASSCI_0) < limit) {
+    if (ev.length() == 1 && is_number(ev[0]) && (ev[0] - ASCII_0) < limit) {
         return true; 
     }
     return false;

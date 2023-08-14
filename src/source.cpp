@@ -15,7 +15,7 @@ enum class Time {
     HOUR,
     MINUTE
 };
-extern const int ASSCI_0;
+extern const int ASCII_0;
 
 //def_func
 
@@ -54,19 +54,19 @@ int main() {
                 if (ev_completed == "[COMPLITED]") {
                     u_com = true;
                 }
-                all_dump[id_task[0] - ASSCI_0].set_completed(u_com); 
+                all_dump[id_task[0] - ASCII_0].set_completed(u_com); 
                 //time
                 std::string ev_time = "";
                 while (!check_event_time(ev_time)) {
                     std::cout << "time(hour:minute):";
                     std::getline(std::cin, ev_time); 
                 }
-                all_dump[id_task[0] - ASSCI_0].set_time(ev_time);
+                all_dump[id_task[0] - ASCII_0].set_time(ev_time);
                 //task
                 std::string ev_task = "";
                 std::cout << "task: ";
                 std::getline(std::cin, ev_task);
-                all_dump[id_task[0] - ASSCI_0].set_task("\""+ ev_task + "\"");
+                all_dump[id_task[0] - ASCII_0].set_task("\""+ ev_task + "\"");
             }
             else if (c_event == 'c') {
                 //is completed
@@ -102,7 +102,7 @@ int main() {
                     std::cout << "id: ";
                     std::getline(std::cin, id_task);
                 }
-                all_dump.erase(all_dump.begin() + (id_task[0] - ASSCI_0));
+                all_dump.erase(all_dump.begin() + (id_task[0] - ASCII_0));
             }
             else if (c_event == 'p') {
                 int counter = 0;
