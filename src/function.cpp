@@ -15,7 +15,7 @@ enum class Time {
     HOUR,
     MINUTE
 };
-extern const int ASSCI_0 = 48;
+const int ASSCI_0 = 48;
 const int max_hour = 23;
 const int max_minute = 59;
 std::vector<char> events = {'c', 'u', 'd', 'p', 'e'};
